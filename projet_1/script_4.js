@@ -47,6 +47,32 @@ console.log(lol+ " handles contiennent des majuscules!")
 
 
 console.log("Combien y a-t-il de underscore _ dans tous les pseudos confondus ?")
-MyArray.forEach(handle => {
-    console.log(handle.match(/[A-Z]/).length)
+UnderscoreArray = MyArray.join();
+lol1 = 0;
+for(let i = 0; i < UnderscoreArray.length; ++i){
+    if(UnderscoreArray[i].match(/[_]/))
+    lol1++;
+}
+console.log(lol1+ " handles contiennent des underscores!")
+
+
+
+
+
+
+
+console.log("Voici la liste des journalistes triés par ordre alphabétique : " +MyArray.sort());
+
+
+
+
+console.log("Quels sont les 50 handles les plus courts de cette array ?");
+
+ MyArray.sort(function(a, b){
+    return a.length - b.length;
   });
+  
+console.log("Voici les handles les plus courts : "+MyArray.slice(0,50));
+
+
+console.log("La personne @epenser est a la place numéro "+ MyArray.indexOf('@epenser'))
